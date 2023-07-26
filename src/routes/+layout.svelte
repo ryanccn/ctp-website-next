@@ -1,7 +1,10 @@
 <script lang="ts">
 	import '../app.postcss';
 	import { assets } from '$app/paths';
+	import { browser } from '$app/environment';
+
 	import { Palette, Ship, HeartHandshake } from 'lucide-svelte';
+	import { onMount } from 'svelte';
 
 	const links = [
 		{
@@ -20,6 +23,18 @@
 			icon: HeartHandshake
 		}
 	] satisfies { name: string; href: string; icon: unknown }[];
+
+	let flavorLocal = '';
+
+	onMount(() => {
+		flavorLocal = window.flavorGlobal.value;
+	});
+
+	$: {
+		if (browser && ['latte', 'frappe', 'macchiato', 'mocha'].includes(flavorLocal)) {
+			window.flavorGlobal.value = flavorLocal;
+		}
+	}
 </script>
 
 <div class="pt-12 pb-36 px-6 max-w-[90ch] mx-auto">
@@ -41,4 +56,50 @@
 	<main>
 		<slot />
 	</main>
+
+	<footer class="mt-36 flex flex-col gap-y-2">
+		<div class="flex flex-wrap items-baseline gap-x-2">
+			<button
+				class={'font-medium text-sm ' +
+					(flavorLocal === 'latte' ? 'text-ctp-blue' : 'text-ctp-subtext1 hover:text-ctp-subtext0')}
+				on:click={() => {
+					flavorLocal = 'latte';
+				}}
+			>
+				Latte
+			</button>
+			<button
+				class={'font-medium text-sm ' +
+					(flavorLocal === 'frappe'
+						? 'text-ctp-blue'
+						: 'text-ctp-subtext1 hover:text-ctp-subtext0')}
+				on:click={() => {
+					flavorLocal = 'frappe';
+				}}
+			>
+				Frappé
+			</button>
+			<button
+				class={'font-medium text-sm ' +
+					(flavorLocal === 'macchiato'
+						? 'text-ctp-blue'
+						: 'text-ctp-subtext1 hover:text-ctp-subtext0')}
+				on:click={() => {
+					flavorLocal = 'macchiato';
+				}}
+			>
+				Macchiato
+			</button>
+			<button
+				class={'font-medium text-sm ' +
+					(flavorLocal === 'mocha' ? 'text-ctp-blue' : 'text-ctp-subtext1 hover:text-ctp-subtext0')}
+				on:click={() => {
+					flavorLocal = 'mocha';
+				}}
+			>
+				Mocha
+			</button>
+		</div>
+		<p class="text-sm text-ctp-surface2">&copy; Catppuccin 2023</p>
+	</footer>
 </div>
