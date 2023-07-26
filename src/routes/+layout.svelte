@@ -38,12 +38,15 @@
 </script>
 
 <div class="pt-12 pb-36 px-6 max-w-[90ch] mx-auto">
-	<nav class="flex flex-row justify-between items-center mb-16">
+	<nav
+		class="flex flex-col items-start gap-y-4 md:flex-row md:justify-between md:items-center mb-16"
+	>
 		<a class="flex flex-row items-center gap-x-2" href="/">
 			<img src={`${assets}/icon.png`} alt="Catppuccin icon" width="32" height="32" />
 			<h1 class="text-lg font-bold">Catppuccin</h1>
 		</a>
-		<div class="flex flex-row items-center gap-x-4">
+
+		<div class="flex flex-col items-start md:flex-row md:items-center gap-4">
 			{#each links as link}
 				<a class="p-2 flex flex-row items-center gap-x-2" href={link.href}>
 					<svelte:component this={link.icon} class="block w-4 h-4" />
