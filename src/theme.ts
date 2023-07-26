@@ -16,16 +16,17 @@ const updateFlavor = (value: string) => {
 };
 
 const flavor = new Proxy(
+	{ value: initialFlavor },
 	{
-		value: initialFlavor
-	},
-	{
-		set: (_, key, value) => {
-			if (key === 'flavor') {
+		set: (target, key, value) => {
+			if (key === 'value') {
 				updateFlavor(value);
 				console.log({ value });
+				target[key] = value;
+				return true;
 			}
-			return true;
+
+			return false;
 		}
 	}
 );
