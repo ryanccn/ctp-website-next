@@ -15,7 +15,7 @@
 <div class="mt-48 flex flex-col gap-y-8">
 	<h3 class="text-3xl font-bold mb-4">Design Philosophy</h3>
 
-	<div class="flex flex-row gap-x-8">
+	<div class="flex flex-col lg:flex-row gap-8">
 		<div class="flex flex-col gap-y-4 lg:w-1/3">
 			<p class="text-3xl">
 				<span class="text-ctp-flamingo">C</span><span class="text-ctp-mauve">o</span><span
