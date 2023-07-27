@@ -1,3 +1,7 @@
+<script>
+	import { ArrowRight } from 'lucide-svelte';
+</script>
+
 <svelte:head>
 	<title>Catppuccin</title>
 </svelte:head>
@@ -47,4 +51,27 @@
 			<p class="text-base text-ctp-subtext0">Vivacious colors must complement each other.</p>
 		</div>
 	</div>
+</div>
+
+<div class="mt-48 flex flex-col gap-y-10">
+	<h3 class="text-3xl font-bold mb-4">Palette</h3>
+
+	<p>
+		Catppuccin consists of 4 beautiful pastel color palettes, named flavors. If you want to use them
+		for your own project, refer to our <a
+			class="inline-link"
+			href="https://github.com/catppuccin/catppuccin/blob/main/docs/style-guide.md">style guide</a
+		>
+		for general use cases and guidelines. Additionally, you can find integrations with popular frameworks
+		and tools in
+		<a class="inline-link" href="https://github.com/catppuccin/palette">catppuccin/palette</a>.
+	</p>
+
+	<a
+		class="flex flex-row items-center gap-x-2 bg-ctp-teal text-ctp-base px-4 py-3 rounded font-medium text-sm brightness-100 hover:brightness-90 transition-all self-start"
+		href="/palette"
+	>
+		<span>View the palette</span>
+		<ArrowRight class="block w-3 h-3 stroke-[2.5]" />
+	</a>
 </div>
