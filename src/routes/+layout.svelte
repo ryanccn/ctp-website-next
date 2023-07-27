@@ -1,9 +1,10 @@
 <script lang="ts">
 	import '../app.postcss';
-	import { assets } from '$app/paths';
 	import { browser } from '$app/environment';
 
-	import { Palette, Ship, HeartHandshake, Users } from 'lucide-svelte';
+	import { Palette, Ship, HeartHandshake } from 'lucide-svelte';
+	import Icon from './Icon.svelte';
+
 	import { onMount } from 'svelte';
 
 	const links = [
@@ -42,7 +43,7 @@
 		class="flex flex-col items-start gap-y-4 md:flex-row md:justify-between md:items-center mb-16"
 	>
 		<a class="flex flex-row items-center gap-x-2" href="/">
-			<img src={`${assets}/icon.png`} alt="Catppuccin icon" width="32" height="32" />
+			<Icon />
 			<h1 class="text-lg font-bold">Catppuccin</h1>
 		</a>
 
