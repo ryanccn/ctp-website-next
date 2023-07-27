@@ -40,7 +40,7 @@
 
 <div class="pt-12 pb-36 px-6 max-w-[90ch] mx-auto">
 	<nav
-		class="flex flex-col items-start gap-y-4 md:flex-row md:justify-between md:items-center mb-16"
+		class="flex flex-col items-start gap-y-8 md:flex-row md:justify-between md:items-center mb-16"
 	>
 		<a class="flex flex-row items-center gap-x-2" href="/">
 			<Icon />
@@ -49,7 +49,7 @@
 
 		<div class="flex flex-col items-start md:flex-row md:items-center gap-4">
 			{#each links as link}
-				<a class="p-2 flex flex-row items-center gap-x-2" href={link.href}>
+				<a class="md:p-2 flex flex-row items-center gap-x-2" href={link.href}>
 					<svelte:component this={link.icon} class="block w-4 h-4" />
 					<span class="text-base font-medium">{link.name}</span>
 				</a>

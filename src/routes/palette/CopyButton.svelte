@@ -20,5 +20,5 @@
 		<CheckIcon class="block w-3 h-3 shrink-0" />
 	{/if}
 
-	<span>{text}</span>
+	<span class="whitespace-nowrap">{text}</span>
 </button>
