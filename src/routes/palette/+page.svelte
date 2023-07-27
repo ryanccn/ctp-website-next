@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { variants } from '@catppuccin/palette';
-	import { ClipboardCopyIcon } from 'lucide-svelte';
+
+	import Head from '../../components/Head.svelte';
 	import CopyButton from './CopyButton.svelte';
 
 	const flavors = Object.keys(variants) as (keyof typeof variants)[];
@@ -13,6 +14,11 @@
 
 	const colors = Object.keys(variants.frappe) as (keyof typeof variants.frappe)[];
 </script>
+
+<Head
+	title="Palette"
+	description="Catppuccin consists of 4 beautiful pastel color palettes, named flavors."
+/>
 
 <h1 class="text-3xl font-extrabold tracking-tight mb-3">Palette</h1>
 <p class="text-lg text-ctp-subtext1 font-medium tracking-tight mb-12">

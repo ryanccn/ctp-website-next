@@ -1,10 +1,9 @@
 <script>
 	import { ArrowRight } from 'lucide-svelte';
+	import Head from '../components/Head.svelte';
 </script>
 
-<svelte:head>
-	<title>Catppuccin</title>
-</svelte:head>
+<Head />
 
 <p class="mt-28 text-4xl font-extrabold tracking-tight leading-tight">
 	Soothing pastel theme for the high-spirited!

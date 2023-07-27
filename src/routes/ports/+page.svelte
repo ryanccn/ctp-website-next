@@ -1,6 +1,7 @@
 <script lang="ts">
 	import Fuse from 'fuse.js';
 	import { Code, Computer, Gamepad, MessageCircle, Search, Umbrella, Users } from 'lucide-svelte';
+	import Head from '../../components/Head.svelte';
 
 	export let data;
 
@@ -48,6 +49,11 @@
 		}
 	}
 </script>
+
+<Head
+	title="Ports"
+	description="Catppuccin is available for various apps and in different formats."
+/>
 
 <!--
 bg-ctp-rosewater bg-ctp-flamingo bg-ctp-pink bg-ctp-mauve bg-ctp-red bg-ctp-maroon
