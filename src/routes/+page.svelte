@@ -17,7 +17,7 @@
 
 	<div class="flex flex-col lg:flex-row gap-8">
 		<div class="flex flex-col gap-y-4 lg:w-1/3">
-			<p class="text-3xl">
+			<p class="text-2xl font-semibold">
 				<span class="text-ctp-flamingo">C</span><span class="text-ctp-mauve">o</span><span
 					class="text-ctp-maroon">l</span
 				><span class="text-ctp-yellow">o</span><span class="text-ctp-teal">r</span><span
@@ -31,14 +31,16 @@
 		</div>
 
 		<div class="flex flex-col gap-y-4 lg:w-1/3">
-			<p class="text-3xl">There should be <span class="text-ctp-blue">balance</span>.</p>
+			<p class="text-2xl font-semibold">
+				There should be <span class="text-ctp-blue">balance</span>.
+			</p>
 			<p class="text-base text-ctp-subtext0">
 				Not too dull, not too bright. Suitability under various light conditions is a must.
 			</p>
 		</div>
 
 		<div class="flex flex-col gap-y-4 lg:w-1/3">
-			<p class="text-3xl">
+			<p class="text-2xl font-semibold">
 				<span class="text-ctp-rosewater">Harmony</span> is superior to
 				<span class="text-ctp-red">dissonance</span>.
 			</p>
