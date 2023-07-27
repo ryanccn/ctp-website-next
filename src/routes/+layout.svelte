@@ -3,7 +3,7 @@
 	import { assets } from '$app/paths';
 	import { browser } from '$app/environment';
 
-	import { Palette, Ship, HeartHandshake } from 'lucide-svelte';
+	import { Palette, Ship, HeartHandshake, Users } from 'lucide-svelte';
 	import { onMount } from 'svelte';
 
 	const links = [
