@@ -39,6 +39,7 @@
 						<td class="p-2">RGB</td>
 						<td class="p-2">HSL</td>
 					</tr>
+
 					{#each colors as colorKey}
 						<tr>
 							<td class="p-2 flex flex-row items-center gap-x-2">
@@ -46,7 +47,9 @@
 									class="block w-4 h-4 rounded-full"
 									style={`background-color: ${variants[flavor][colorKey].hex}`}
 								/>
-								<span class="font-semibold">{colorKey[0].toUpperCase() + colorKey.slice(1)}</span>
+								<span class="font-semibold text-sm">
+									{colorKey[0].toUpperCase() + colorKey.slice(1)}
+								</span>
 							</td>
 
 							<td class="p-2">

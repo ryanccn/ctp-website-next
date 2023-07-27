@@ -15,9 +15,9 @@
 
 <button class="flex flex-row items-center gap-x-1 text-xs font-mono" on:click={activate}>
 	{#if !showCheck}
-		<ClipboardCopyIcon class="block w-3 h-3" />
+		<ClipboardCopyIcon class="block w-3 h-3 shrink-0" />
 	{:else}
-		<CheckIcon class="block w-3 h-3" />
+		<CheckIcon class="block w-3 h-3 shrink-0" />
 	{/if}
 
 	<span>{text}</span>
