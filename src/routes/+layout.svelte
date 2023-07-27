@@ -6,6 +6,11 @@
 	import Icon from './Icon.svelte';
 
 	import { onMount } from 'svelte';
+	import GitHub from '../icons/GitHub.svelte';
+	import Discord from '../icons/Discord.svelte';
+	import Twitter from '../icons/Twitter.svelte';
+	import Mastodon from '../icons/Mastodon.svelte';
+	import Reddit from '../icons/Reddit.svelte';
 
 	const links = [
 		{
@@ -61,7 +66,15 @@
 		<slot />
 	</main>
 
-	<footer class="mt-36 flex flex-col gap-y-2">
+	<footer class="mt-36 flex flex-col gap-y-4">
+		<div class="flex flex-wrap items-center gap-x-3 fill-ctp-text">
+			<a href="https://github.com/catppuccin"><GitHub class="block w-5 h-5" /></a>
+			<a href="https://discord.com/servers/907385605422448742"><Discord class="block w-5 h-5" /></a>
+			<a href="https://twitter.com/catppuccintheme"><Twitter class="block w-5 h-5" /></a>
+			<a href="https://fosstodon.org/@catppuccin"><Mastodon class="block w-5 h-5" /></a>
+			<a href="https://reddit.com/r/catppuccin"><Reddit class="block w-5 h-5" /></a>
+		</div>
+
 		<div class="flex flex-wrap items-baseline gap-x-2">
 			<button
 				class={'font-medium text-sm ' +
@@ -104,6 +117,7 @@
 				Mocha
 			</button>
 		</div>
+
 		<p class="text-sm text-ctp-surface2">&copy; Catppuccin 2023</p>
 	</footer>
 </div>
