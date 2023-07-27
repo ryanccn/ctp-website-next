@@ -13,6 +13,7 @@
 		"format": "prettier --plugin-search-dir . --write ."
 	},
 	"dependencies": {
+		"fuse.js": "^6.6.2",
 		"lucide-svelte": "^0.263.0"
 	},
 	"devDependencies": {

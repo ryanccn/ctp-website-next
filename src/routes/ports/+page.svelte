@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Fuse from 'fuse.js';
 	import { Code, Computer, Gamepad, MessageCircle, Search, Umbrella, Users } from 'lucide-svelte';
 
 	export let data;
@@ -9,18 +10,42 @@
 	let filteredUserstyles = userstyles;
 	let searchTerm = '';
 
-	$: {
-		filteredPorts = Object.fromEntries(
-			Object.entries(ports).filter(([id, p]) => (p.name ?? id).toLowerCase().includes(searchTerm))
-		);
+	const portsFuse = new Fuse(Object.entries(ports), {
+		threshold: 0.45,
+		keys: [
+			{ name: 'ID', getFn: (obj) => obj[0] },
+			{ name: 'Name', getFn: (obj) => obj[1].name },
+			{ name: 'Category', getFn: (obj) => obj[1].category ?? [] }
+		]
+	});
+	const userstylesFuse = new Fuse(Object.entries(userstyles), {
+		threshold: 0.45,
+		keys: [
+			{ name: 'ID', getFn: (obj) => obj[0] },
+			{ name: 'Name', getFn: (obj) => obj[1].name },
+			{ name: 'Category', getFn: (obj) => obj[1].category }
+		]
+	});
 
-		filteredUserstyles = Object.fromEntries(
-			Object.entries(userstyles).filter(([id, p]) =>
-				typeof p.name === 'string'
-					? p.name.toLowerCase().includes(searchTerm)
-					: p.name.map((k) => k.toLowerCase()).some((k) => k.includes(searchTerm))
-			)
-		);
+	$: {
+		if (searchTerm) {
+			filteredPorts = Object.fromEntries(
+				portsFuse
+					.search(searchTerm)
+					.sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
+					.map((k) => k.item)
+			);
+
+			filteredUserstyles = Object.fromEntries(
+				userstylesFuse
+					.search(searchTerm)
+					.sort((a, b) => (b.score ?? 0) - (a.score ?? 0))
+					.map((k) => k.item)
+			);
+		} else {
+			filteredPorts = ports;
+			filteredUserstyles = userstyles;
+		}
 	}
 </script>
 
