@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.postcss';
-	import { browser } from '$app/environment';
+	import { browser, dev } from '$app/environment';
 
 	import { Palette, Ship, HeartHandshake } from 'lucide-svelte';
 	import Icon from './Icon.svelte';
@@ -42,6 +42,16 @@
 		}
 	}
 </script>
+
+<svelte:head>
+	{#if !dev}
+		<script
+			src="/_p/js/script.js"
+			data-api="/_p/api/event"
+			data-domain="catppuccin.ryanccn.dev"
+		></script>
+	{/if}
+</svelte:head>
 
 <nav class="flex flex-col items-start gap-y-8 md:flex-row md:justify-between md:items-center mb-16">
 	<a class="flex flex-row items-center gap-x-2" href="/">
