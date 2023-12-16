@@ -1,5 +1,7 @@
 <script lang="ts">
 	import '../app.postcss';
+	import '../inter/inter.css';
+
 	import { browser, dev } from '$app/environment';
 
 	import { Palette, Ship, HeartHandshake } from 'lucide-svelte';

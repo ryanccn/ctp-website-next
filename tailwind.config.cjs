@@ -1,11 +1,16 @@
 /* eslint-disable @typescript-eslint/no-var-requires */
+const defaultTheme = require('tailwindcss/defaultTheme');
 
 /** @type {import('tailwindcss').Config}*/
 const config = {
 	content: ['./src/**/*.{html,js,svelte,ts}'],
 
 	theme: {
-		extend: {}
+		extend: {
+			fontFamily: {
+				sans: ['Inter', 'Inter fallback', ...defaultTheme.fontFamily.sans]
+			}
+		}
 	},
 
 	plugins: [
