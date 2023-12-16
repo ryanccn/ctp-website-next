@@ -4,7 +4,7 @@ import type { Port, PortCategory, Userstyle } from './types';
 export async function load() {
 	const [portsResp, userstylesResp] = await Promise.all([
 		fetch('https://raw.githubusercontent.com/catppuccin/catppuccin/main/resources/ports.yml'),
-		fetch('https://raw.githubusercontent.com/catppuccin/userstyles/main/src/userstyles.yml')
+		fetch('https://raw.githubusercontent.com/catppuccin/userstyles/main/scripts/userstyles.yml')
 	]);
 
 	const [portsRaw, userstylesRaw] = await Promise.all([portsResp.text(), userstylesResp.text()]);
