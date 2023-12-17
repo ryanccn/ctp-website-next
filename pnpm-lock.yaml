@@ -12,8 +12,8 @@ dependencies:
     specifier: ^7.0.0
     version: 7.0.0
   lucide-svelte:
-    specifier: ^0.297.0
-    version: 0.297.0(svelte@4.2.8)
+    specifier: ^0.298.0
+    version: 0.298.0(svelte@4.2.8)
 
 devDependencies:
   '@catppuccin/tailwindcss':
@@ -21,10 +21,10 @@ devDependencies:
     version: 0.1.6(tailwindcss@3.3.6)
   '@sveltejs/adapter-vercel':
     specifier: ^4.0.2
-    version: 4.0.2(@sveltejs/kit@2.0.0)
+    version: 4.0.2(@sveltejs/kit@2.0.1)
   '@sveltejs/kit':
-    specifier: ^2.0.0
-    version: 2.0.0(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.8)(vite@5.0.10)
+    specifier: ^2.0.1
+    version: 2.0.1(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.8)(vite@5.0.10)
   '@sveltejs/vite-plugin-svelte':
     specifier: ^3.0.1
     version: 3.0.1(svelte@4.2.8)(vite@5.0.10)
@@ -782,12 +782,12 @@ packages:
     dev: true
     optional: true
 
-  /@sveltejs/adapter-vercel@4.0.2(@sveltejs/kit@2.0.0):
+  /@sveltejs/adapter-vercel@4.0.2(@sveltejs/kit@2.0.1):
     resolution: {integrity: sha512-DrNXWIRz5f6I4TZPLfSb7q5vDJRf7sKUxPbe10X4pOHdCBTFbb2JDi2UTnV3ULP5YSqFvIsSIPdnuMoSFsn2mQ==}
     peerDependencies:
       '@sveltejs/kit': ^2.0.0
     dependencies:
-      '@sveltejs/kit': 2.0.0(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.8)(vite@5.0.10)
+      '@sveltejs/kit': 2.0.1(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.8)(vite@5.0.10)
       '@vercel/nft': 0.26.0
       esbuild: 0.19.9
     transitivePeerDependencies:
@@ -795,8 +795,8 @@ packages:
       - supports-color
     dev: true
 
-  /@sveltejs/kit@2.0.0(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.8)(vite@5.0.10):
-    resolution: {integrity: sha512-/GFxvit+q7PztRbgGTFXhVB6jvb0fZSeWuz5f4siQ2r/5BVhxYh7++Bw3/ZUjiOuyoZFiNBmOPcRNQbkzEce0g==}
+  /@sveltejs/kit@2.0.1(@sveltejs/vite-plugin-svelte@3.0.1)(svelte@4.2.8)(vite@5.0.10):
+    resolution: {integrity: sha512-Pu/YJ5pPy8UgC1LlrlGpL7UK25CKganlLqqO7oYdFGt7eSa+Y2ouJomwiGHatV3uHvVOPGEkcb4O4QtyZQDuGw==}
     engines: {node: '>=18.13'}
     hasBin: true
     requiresBuild: true
@@ -2056,8 +2056,8 @@ packages:
       yallist: 4.0.0
     dev: true
 
-  /lucide-svelte@0.297.0(svelte@4.2.8):
-    resolution: {integrity: sha512-D2JouMIE5myXwkc3ODalWR/4QIJTb1VbZIoXyisMU/K2Ada7XBdQdNkYRI8sgfdCysf4JF79W0YjWNcMyXNH6Q==}
+  /lucide-svelte@0.298.0(svelte@4.2.8):
+    resolution: {integrity: sha512-7xYNSMY1z1QMjLe8GWToFtFh0lvTsrxdgEAXMite/Urn9tPD16Xk3597ibpgt9Ff7IBb/ArMc3y3ZKofZhs8fQ==}
     peerDependencies:
       svelte: '>=3 <5'
     dependencies:
