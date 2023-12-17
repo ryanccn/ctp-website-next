@@ -78,11 +78,13 @@ bg-ctp-blue bg-ctp-lavender bg-ctp-text
 	{#each Object.entries(filteredPorts) as [id, port] (id)}
 		<li>
 			<a
-				class={'p-4 rounded-lg flex flex-col gap-y-2 h-full ' +
+				class={'p-4 rounded-lg flex flex-col gap-y-2 h-full overflow-hidden ' +
 					(port.color ? `bg-ctp-${port.color} bg-opacity-20` : 'bg-ctp-surface0')}
 				href={`https://github.com/catppuccin/${id}`}
 			>
-				<span class="text-lg font-semibold leading-snug">{port.name}</span>
+				<span class="text-lg font-semibold leading-snug overflow-hidden text-ellipsis">
+					{port.name}
+				</span>
 
 				{#if port.category}
 					{@const category = portCategories.find((a) => a.key === port.category)}
