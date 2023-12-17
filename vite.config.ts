@@ -5,5 +5,5 @@ import { FontaineTransform } from 'fontaine';
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-	plugins: [imagetools(), sveltekit(), FontaineTransform.vite({ fallbacks: ['Arial', 'Roboto'] })]
+	plugins: [imagetools(), FontaineTransform.vite({ fallbacks: ['Arial', 'Roboto'] }), sveltekit()]
 });
